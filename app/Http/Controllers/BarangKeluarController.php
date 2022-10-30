@@ -65,17 +65,17 @@ class BarangKeluarController extends Controller
      */
     public function store(Request $request)
     {
-            $this->validate($request, [
-                'jenisBarang_id' => 'required',
-                'qty' => 'required|min:1'
-            ]);
+        $this->validate($request, [
+            'jenisBarang_id' => 'required',
+            'qty' => 'required|min:1'
+        ]);
 
-            $qty = $request->qty;
-            $jenisBarang_id = $request->input('jenisBarang_id');
-            $cekQty = JenisBarang::find($jenisBarang_id);
+        $qty = $request->qty;
+        $jenisBarang_id = $request->input('jenisBarang_id');
+        $cekQty = JenisBarang::find($jenisBarang_id);
 
-            if ($cekQty) {
-                if ($qty <  (string) $cekQty->stok) {
+        if ($cekQty) {
+            if ($qty <  (string) $cekQty->stok) {
                 // untuk mengurangi jumlah stok pada table "jenis_barang"
                 DB::update("UPDATE jenis_barang SET stok = stok - '$qty' WHERE id = '$jenisBarang_id'");
 
@@ -88,16 +88,12 @@ class BarangKeluarController extends Controller
 
 
                 return redirect('/dashboard/InputBarang/BarangKeluar')->with('success', 'Data Berhasil Ditambah');
-                
-                } else {
-                    return redirect('/dashboard/InputBarang/BarangKeluar/create')->with('qty_failed', 'Jumlah pengeluaran lebih besar dari stok');
-                }
-               
-            } else{
-                return redirect('/dashboard/InputBarang/BarangKeluar/create')->with('failed', 'Data Input Tidak Valid');
-                }
-            
-        
+            } else {
+                return redirect('/dashboard/InputBarang/BarangKeluar/create')->with('qty_failed', 'Jumlah pengeluaran lebih besar dari stok');
+            }
+        } else {
+            return redirect('/dashboard/InputBarang/BarangKeluar/create')->with('failed', 'Data Input Tidak Valid');
+        }
     }
 
     /**

@@ -1,64 +1,135 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<!-- <p align="center"><a href="" target="_blank"><img src="https://user-images.githubusercontent.com/68214221/167259266-ebf72cd7-d495-4d04-b91f-d98c4fab4e55.png" width="400"></a></p> -->
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## DEFINISI APLIKASI INVENTORY BARANG
 
-## About Laravel
+Inventory merupakan suatu ketersediaan barang pada setiap perusahaan atau pun non-perusahaan, ini berguna untuk memanajemen stok barang yang ada di gudang agar mudah untuk di tracking.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Sehingga jika barang kekurangan atau pun kelebihan, kita bisa mudah mengetahui nya dengan sistem inventory ini, Tugas ini dibuat untuk memenuhi syarat kelulusan yakni untuk tugas akhir pada toko alat kesehatan rayyan medical, mereka membutuhkan sistem inventory barang yang bisa di track secara digital dan realtime.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## MASALAH ATAU TANTANGAN
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Web Aplikasi Inventory ini dibuat untuk memudahkan karyawan dan yang lain nya agar mudah mentracking stok barang, dengan adanya aplikasi ini Rayyan Medical yakin kedepanya akan semakin mudah dan efesien dalam melakukan manajemen stok barang. Namun dalam proses pembuatan nya terdapat beberapa tantangan dan masalah.
 
-## Learning Laravel
+Tantangan yang didapatkan saat mengerjakan project ini adalah :
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   melakukan research dan interview orang lain untuk kebutuhan aplikasi ini
+-   sulit nya membuat tampilan untuk aplikasi ini
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## SOLUSI
 
-## Laravel Sponsors
+Solusi dari tantangan yang dihadapi adalah :
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+-   Melakukan interview dengan client untuk melihat apa yang mereka inginkan pada aplikasi ini.
+-   Membuat design nya terlebih dahulu lalu di presentasikan ke client, sehingga jika ada revisi bisa dilakukan sebelum koding pembuatan aplikasi ini.
 
-### Premium Partners
+## PROSES PEMBUATAN
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+Selengkapnya di portofolio :
 
-## Contributing
+## ALUR PROGRAM INVENTORY
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Selengkapnya di portofolio :
 
-## Code of Conduct
+## CARA MENGGUNAKAN APLIKASI INVENTORY BARANG
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Aplikasi ini dibuat menggunakan framework laravel 8, jadi jika ingin menggunakan aplikasi ini hal yang diperlukan adalah :
 
-## Security Vulnerabilities
+1. terinstall composer versi terbaru
+2. terinstall laravel versi 8 (dengan catatan port phpmyadmin sudah berubah menjadi 8080)
+3. terinstall xampp atau sejenisnya
+4. terinstall php versi 8.0
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Lalu untuk cara menggunakanya ikuti langkah berikut :
 
-## License
+-   download project ini lalu simpan di htdocs local kalian
+-   lalu buka project ini di kode editor favorit kalian
+-   rename file .env.example menjadi .env
+-   buka file .env.example lalu ubah isi pada bagian "DB_DATABASE" menjadi "db_inventory" tetapi kalian harus membuat databasenya terlebih dahulu di phpmyadmin
+-   setelah itu buka terminal kalian yang sudah mengarah di project ini
+-   lalu ketikan di terminal kalian
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+   composer install
+```
+
+-   lalu setelah itu jalankan perintah ini
+
+```
+   php artisan migrate:fresh --seed
+```
+
+-   masih di terminal ketikan kembali ini lalu enter
+
+```
+ php artisan storage:link
+```
+
+-   jika sampai sini kalian tidak ada masalah maka aplikasi sudah siap digunakan
+
+Lalu untuk menjalankan aplikasi nya dengan cara berikut :
+
+-   buka terminal yang sudah mengarah di project ini
+-   lalu ketikan
+
+```
+ php artisan serve
+```
+
+-   setelah itu copy url yang muncul "http://127.0.0.1:8000/" biasanya itu yang akan tertulis
+-   lalu pastekan url tersebut di browser yang kalian suka lalau klik enter
+
+## FITUR YANG ADA DI APLIKASI INVENTORY
+
+Fitur yang terdapat pada aplikasi ini diantaranya :
+
+### ADMINISTRATOR
+
+<!-- <img src="https://user-images.githubusercontent.com/68214221/167260281-0c1a8aa3-bc65-467d-84ba-c5f245a10cf3.png" width="500"> -->
+
+<!-- Administrator dapat mengelola : -->
+
+<!-- 1. Login dengan cara ketik di url "http://127.0.0.1:8000/login"
+   <img src="https://user-images.githubusercontent.com/68214221/167260912-979f2157-5490-4b3d-8aa5-356d6ed248e7.png" width="500">
+
+2. Melakukan CRUD(Create, Read, Update dan Delete) pada Tipe Kamar
+   <img src="https://user-images.githubusercontent.com/68214221/167260309-bb4e3499-4c4f-47a1-bb88-cc046f10d9bf.png" width="500">
+
+3. Melakukan CRUD(Create, Read, Update dan Delete) pada Fasilitas Kamar
+   <img src="https://user-images.githubusercontent.com/68214221/167260308-bd2549d3-1f26-41fa-a647-73a3fc11a556.png" width="500">
+
+4. Melakukan CRUD(Create, Read, Update dan Delete) pada Fasilitas Hotel
+   <img src="https://user-images.githubusercontent.com/68214221/167260306-3b5022c6-e0d5-4f79-8621-c0486b64cd66.png" width="500">
+
+kalian bisa mencoba nya sendiri untuk fitur admin ini -->
+
+### KARYAWAN
+
+<!-- <img src="https://user-images.githubusercontent.com/68214221/167260695-663dfa0d-2225-4c73-98a5-bc4964ecfcf1.png" width="500">
+
+Resepsionis dapat mengelola :
+
+1. Login dengan cara ketik di url "http://127.0.0.1:8000/login"
+   <img src="https://user-images.githubusercontent.com/68214221/167260912-979f2157-5490-4b3d-8aa5-356d6ed248e7.png" width="500">
+
+2. Melakukan filtering data berdasarkan tanggal check-in dan nama tamu. Serta dapat melakukan check-in kamar yang sudah dipesan dan dapat melakukan pembatalan pesan.
+   <img src="https://user-images.githubusercontent.com/68214221/167260698-b6b7f038-065e-434c-b5e1-afb97c753f54.png" width="500">
+
+3. Melihat nota reservasi pada tombol "lihat" dan tampilan nya seperti ini jika di klik.
+   <img src="https://user-images.githubusercontent.com/68214221/167260781-a607e447-e1f6-4867-b32b-18c267294aef.png" width="500">
+
+Resepsionis tidak mengatur check-out reservasi karena fitur chekc-out sudah dibuat otomatis oleh sistem.
+Jika hari ini sama dengan hari check-out maka status reservasi akan berubah menjadi "check-out" secara otomatis selama halaman itu di refresh. -->
+
+## KONTAK
+
+Sekian project ujian dunia industri tahun 2022 milik saya ini, <br>
+Jika ada yang ingin ditambahkan atau dikoreksi bisa hubungi saya ke email yang berada di portofolio ya!
+
+Arigatou. :)
+
+🔥 TERIMAKASIH 🔥 <br>
+Terimakasih banyak untuk kalian yang udah mampir kesini, semoga mempelajari sesuatu! ❤️
+
+```
+
+```

@@ -41,7 +41,7 @@
 
         <div class="mb-3">
             <label for="no_telp" class="form-label @error('no_telp') is-invalid @enderror">No Telp</label>
-            <input type="text" name="no_telp" id="no_telp" class="form-control d-flex" placeholder="No Telp.." required value=" (+62) {{ old('no_telp') }}">
+            <input type="text" name="no_telp" id="no_telp" class="form-control d-flex" placeholder="No Telp.." required value="+62 {{ old('no_telp') }}">
             @error('no_telp')
                 <div class="invalid-feedback">
                     {{ $message }}

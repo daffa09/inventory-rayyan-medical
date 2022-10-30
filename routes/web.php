@@ -39,7 +39,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard', [DashboardController::class, 'indexAdmin'])->middleware('auth');
 Route::get('/dashboard', [DashboardController::class, 'indexKaryawan'])->middleware('auth');
 
-Route::resource('/dashboard/pesan', AdminPesanController::class)->middleware('admin');
+Route::resource('/dashboard/pesan', AdminPesanController::class)->middleware('admin');  
 
 Route::resource('/dashboard/profile', UserController::class)->middleware('auth');
 

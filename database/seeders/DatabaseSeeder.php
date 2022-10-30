@@ -22,22 +22,22 @@ class DatabaseSeeder extends Seeder
 
 
         User::create([
-            'nama' => 'Daffa Fathan',
-            'username' => 'Fanthom',
+            'nama' => 'Administrator',
+            'username' => 'Admin',
             'alamat' => 'Disini',
-            'email' => 'daffa@gmail.com',
+            'email' => 'admin@gmail.com',
             'no_telp' => '+62123456789',
-            'password' => bcrypt('password'),
+            'password' => bcrypt('12345'),
             'is_admin' => true
         ]);
 
         User::create([
-            'nama' => 'Grey',
-            'username' => 'Grey',
+            'nama' => 'Karyawan',
+            'username' => 'Karyawan',
             'alamat' => 'Disini',
-            'email' => 'grey@gmail.com',
+            'email' => 'karyawan@gmail.com',
             'no_telp' => '+62123456787',
-            'password' => bcrypt('password'),
+            'password' => bcrypt('12345'),
             'is_karyawan' => true
         ]);
 
@@ -51,26 +51,26 @@ class DatabaseSeeder extends Seeder
         //     'is_karyawan' => true
         // ]);
 
-        // JenisBarang::create([
-        //     'kode_barang' => 101,
-        //     'nama_barang' => 'Tabung Oksigen 1m3',
-        //     'stok' => 100,
-        //     'harga' => 650000
-        // ]);
+        JenisBarang::create([
+            'kode_barang' => 101,
+            'nama_barang' => 'Tabung Oksigen 1m3',
+            'stok' => 100,
+            'harga' => 650000
+        ]);
 
-        // JenisBarang::create([
-        //     'kode_barang' => 102,
-        //     'nama_barang' => 'Tabung Oksigen 1m2',
-        //     'stok' => 100,
-        //     'harga' => 700000
-        // ]);
+        JenisBarang::create([
+            'kode_barang' => 102,
+            'nama_barang' => 'Tabung Oksigen 1m2',
+            'stok' => 100,
+            'harga' => 700000
+        ]);
 
-        // JenisBarang::create([
-        //     'kode_barang' => 103,
-        //     'nama_barang' => 'Termometer',
-        //     'stok' => 100,
-        //     'harga' => 100000
-        // ]);
+        JenisBarang::create([
+            'kode_barang' => 103,
+            'nama_barang' => 'Termometer',
+            'stok' => 100,
+            'harga' => 100000
+        ]);
 
         // DataBarang::factory(10)->create();
 
