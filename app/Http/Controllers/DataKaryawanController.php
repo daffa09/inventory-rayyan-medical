@@ -19,7 +19,7 @@ class DataKaryawanController extends Controller
     {
         $this->authorize('admin');
         $users = DB::table('users')
-            ->select('id', 'nama', 'image', 'email', 'alamat', 'no_telp')
+            ->select('id', 'nama', 'image', 'email', 'alamat', 'no_telp', 'is_karyawan', 'is_admin', 'status')
             ->orderBy('id', 'Desc')
             ->paginate(5)->withQueryString();
         $search = $request->get('search');
@@ -70,6 +70,7 @@ class DataKaryawanController extends Controller
 
         $validateData['is_karyawan'] = true;
         $validateData['is_admin'] = false;
+        $validateData['status'] = true;
         $validateData['password'] = Hash::make($validateData['password']);
 
         User::create($validateData);
@@ -107,6 +108,10 @@ class DataKaryawanController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $model = User::find($id);
+
+        $model->update(['status' => true]);
+        return redirect('/dashboard/DataKaryawan')->with('success', 'User Berhasil di aktifkan!');
     }
 
     /**
@@ -119,10 +124,12 @@ class DataKaryawanController extends Controller
     {
         $model = User::find($id);
 
-        if ($model->image) {
-            Storage::delete($model->image);
-        }
-        $model->delete();
-        return redirect('/dashboard/DataKaryawan')->with('success', 'Data Berhasil Dihapus!');
+        // if ($model->image) {
+        //     Storage::delete($model->image);
+        // }
+        // $model->delete();
+        // change status into 0
+        $model->update(['status' => false]);
+        return redirect('/dashboard/DataKaryawan')->with('success', 'User berhasil di non-aktifkan!');
     }
 }

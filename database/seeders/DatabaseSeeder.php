@@ -28,7 +28,8 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'no_telp' => '+62123456789',
             'password' => bcrypt('12345'),
-            'is_admin' => true
+            'is_admin' => true,
+            'status' => true
         ]);
 
         User::create([
@@ -38,7 +39,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'karyawan@gmail.com',
             'no_telp' => '+62123456787',
             'password' => bcrypt('12345'),
-            'is_karyawan' => true
+            'is_karyawan' => true,
+            'status' => true,
+            'status' => true
         ]);
 
         // User::create([
