@@ -1,135 +1,321 @@
-<!-- <p align="center"><a href="" target="_blank"><img src="https://user-images.githubusercontent.com/68214221/167259266-ebf72cd7-d495-4d04-b91f-d98c4fab4e55.png" width="400"></a></p> -->
+<!-- portfolio -->
+<!-- slug: inventory-rayyan-medical -->
+<!-- title: Rayyan Medical Inventory System -->
+<!-- description: Comprehensive inventory management web application for Rayyan Medical to track medical supplies and equipment in real-time -->
+<!-- image: https://github.com/user-attachments/assets/placeholder-inventory-rayyan -->
+<!-- tags: laravel, php, mysql, inventory-management, medical, bootstrap -->
 
-## DEFINISI APLIKASI INVENTORY BARANG
+# Rayyan Medical Inventory Management System
 
-Inventory merupakan suatu ketersediaan barang pada setiap perusahaan atau pun non-perusahaan, ini berguna untuk memanajemen stok barang yang ada di gudang agar mudah untuk di tracking.
+A comprehensive web-based inventory management system developed specifically for Rayyan Medical, a medical equipment store. This applicationprovides real-time digital tracking of medical supplies and equipment, enabling efficient stock management and operational oversight.
 
-Sehingga jika barang kekurangan atau pun kelebihan, kita bisa mudah mengetahui nya dengan sistem inventory ini, Tugas ini dibuat untuk memenuhi syarat kelulusan yakni untuk tugas akhir pada toko alat kesehatan rayyan medical, mereka membutuhkan sistem inventory barang yang bisa di track secara digital dan realtime.
+## 📋 Overview
 
-## MASALAH ATAU TANTANGAN
+The Rayyan Medical Inventory System is a complete solution for managing medical equipment inventory. Built as a final project for industry certification, this application addresses the real-world needs of Rayyan Medical by providing a digital, real-time inventory tracking system that streamlines stock management operations.
 
-Web Aplikasi Inventory ini dibuat untuk memudahkan karyawan dan yang lain nya agar mudah mentracking stok barang, dengan adanya aplikasi ini Rayyan Medical yakin kedepanya akan semakin mudah dan efesien dalam melakukan manajemen stok barang. Namun dalam proses pembuatan nya terdapat beberapa tantangan dan masalah.
+## 🎯 Problem Statement
 
-Tantangan yang didapatkan saat mengerjakan project ini adalah :
+Medical equipment stores like Rayyan Medical face critical challenges in inventory management:
+- **Stock Tracking**: Difficulty monitoring stock levels across multiple product categories
+- **Shortage Detection**: Delayed awareness of low stock or out-of-stock items
+- **Overstocking Issues**: Inability to identify excess inventory in real-time
+- **Manual Processes**: Time-consuming manual inventory checks
+- **Real-time Updates**: Need for instant visibility into current stock levels
 
--   melakukan research dan interview orang lain untuk kebutuhan aplikasi ini
--   sulit nya membuat tampilan untuk aplikasi ini
+This application was created to solve these challenges by providing an automated, digital inventory management system.
 
-## SOLUSI
+## ✨ Key Features
 
-Solusi dari tantangan yang dihadapi adalah :
+### For Employees/Staff
+- **Dashboard Overview**: Real-time inventory statistics and alerts
+- **Stock Management**: View current stock levels for all products
+- **Low Stock Alerts**: Automatic notifications for items below threshold
+- **Product Search**: Quick search and filter functionality
+- **Stock Reports**: Generate inventory reports by category or date range
+- **Transaction History**: Track all inventory movements
 
--   Melakukan interview dengan client untuk melihat apa yang mereka inginkan pada aplikasi ini.
--   Membuat design nya terlebih dahulu lalu di presentasikan ke client, sehingga jika ada revisi bisa dilakukan sebelum koding pembuatan aplikasi ini.
+### For Administrators
+- **Complete CRUD Operations**:
+  - Add new medical equipment to inventory
+  - Update product information and stock levels
+  - Remove discontinued items
+  - Bulk import/export capabilities
 
-## PROSES PEMBUATAN
+- **Category Management**:
+  - Organize products by medical equipment categories
+  - Manage product specifications
+  - Set reorder points
 
-Selengkapnya di portofolio :
+- **User Management**:
+  - Create and manage staff accounts
+  - Set role-based permissions
+  - Track user activities
 
-## ALUR PROGRAM INVENTORY
+- **Reporting Tools**:
+  - Stock valuation reports
+  - Movement history
+  - Forecasting and analytics
 
-Selengkapnya di portofolio :
+## 🛠️ Technologies Used
 
-## CARA MENGGUNAKAN APLIKASI INVENTORY BARANG
+| Technology | Purpose |
+|------------|---------|
+| **Laravel 8** | PHP backend framework |
+| **PHP 8.0** | Server-side programming |
+| **MySQL** | Relational database |
+| **Bootstrap** | Responsive UI framework |
+| **jQuery** | JavaScript interactions |
+| **Chart.js** | Data visualization |
+| **Webpack Mix** | Asset compilation |
 
-Aplikasi ini dibuat menggunakan framework laravel 8, jadi jika ingin menggunakan aplikasi ini hal yang diperlukan adalah :
-
-1. terinstall composer versi terbaru
-2. terinstall laravel versi 8 (dengan catatan port phpmyadmin sudah berubah menjadi 8080)
-3. terinstall xampp atau sejenisnya
-4. terinstall php versi 8.0
-
-Lalu untuk cara menggunakanya ikuti langkah berikut :
-
--   download project ini lalu simpan di htdocs local kalian
--   lalu buka project ini di kode editor favorit kalian
--   rename file .env.example menjadi .env
--   buka file .env.example lalu ubah isi pada bagian "DB_DATABASE" menjadi "db_inventory" tetapi kalian harus membuat databasenya terlebih dahulu di phpmyadmin
--   setelah itu buka terminal kalian yang sudah mengarah di project ini
--   lalu ketikan di terminal kalian
+## 📁 Project Structure
 
 ```
+inventory-rayyan-medical/
+├── app/
+│   ├── Http/Controllers/      # Application logic
+│   ├── Models/                # Database models
+│   └── Requests/             # Form validation
+├── database/
+│   ├── migrations/            # Database schema
+│   └── seeders/              # Sample data
+├── resources/
+│   ├── views/                # Blade templates
+│   └── assets/               # CSS, JS files
+├── public/
+│   └── images/              # Product images
+└── routes/
+    └── web.php              # Application routes
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- PHP 8.0 or higher
+- Composer (latest version)
+- MySQL 5.7+ or MariaDB
+- XAMPP, WAMPP, or similar local server
+- PHP MyAdmin (optional, for database management)
+
+### Installation Steps
+
+1. **Clone the Repository**
+   ```bash
+   git clone <repository-url>
+   cd inventory-rayyan-medical
+   ```
+
+2. **Install Dependencies**
+   ```bash
    composer install
-```
+   npm install
+   ```
 
--   lalu setelah itu jalankan perintah ini
+3. **Environment Configuration**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-```
+4. **Configure Database**
+   
+   Edit `.env` file:
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=db_inventory
+   DB_USERNAME=root
+   DB_PASSWORD=your_password
+   ```
+
+5. **Create Database**
+   - Open PHPMyAdmin
+   - Create a new database named `db_inventory`
+
+6. **Run Migrations and Seeders**
+   ```bash
    php artisan migrate:fresh --seed
+   ```
+
+7. **Create Storage Link**
+   ```bash
+   php artisan storage:link
+   ```
+
+8. **Compile Assets**
+   ```bash
+   npm run dev
+   ```
+
+9. **Start Development Server**
+   ```bash
+   php artisan serve
+   ```
+
+10. **Access Application**
+    - Open browser: `http://127.0.0.1:8000`
+    - Login URL: `http://127.0.0.1:8000/login`
+
+## 💻 Usage Guide
+
+### Logging In
+
+1. Navigate to the login page
+2. Enter credentials:
+   - **Admin Account**: 
+     - Email: admin@rayyanmedical.com
+     - Password: (set during seeding)
+   - **Staff Account**:
+     - Email: staff@rayyanmedical.com
+     - Password: (set during seeding)
+
+### Managing Inventory
+
+#### Adding New Items
+1. Navigate to "Products" section
+2. Click "Add New Product"
+3. Fill in product details:
+   - Product name
+   - Category
+   - SKU/Product code
+   - Stock quantity
+   - Unit price
+   - Description
+   - Product image
+4. Set reorder point (minimum stock level)
+5. Click "Save"
+
+#### Updating Stock
+1. Go to "Inventory" dashboard
+2. Find the product
+3. Click "Update Stock"
+4. Enter new quantity (add or subtract)
+5. Add transaction note
+6. System automatically records timestamp and user
+
+#### Checking Stock Levels
+1. View dashboard for real-time overview
+2. Check "Low Stock" alerts section
+3. Use search/filter to find specific items
+4. Export stock reports as needed
+
+### Generating Reports
+
+1. Navigate to "Reports" section
+2. Select report type:
+   - Current stock levels
+   - Stock movements
+   - Low stock items
+   - Stock valuation
+3. Choose date range
+4. Select format (PDF, Excel, Print)
+5. Generate and download/print
+
+## 🔧 Configuration
+
+### Stock Alert Thresholds
+
+Configure in `config/inventory.php`:
+```php
+return [
+    'low_stock_threshold' => 10, // Alert when stock <= 10
+    'critical_stock_threshold' => 5, // Critical when stock <= 5
+];
 ```
 
--   masih di terminal ketikan kembali ini lalu enter
+### Categories Setup
 
-```
- php artisan storage:link
-```
+Categories can be managed via the admin panel or database seeder.
 
--   jika sampai sini kalian tidak ada masalah maka aplikasi sudah siap digunakan
+## 🎨 UI/UX Features
 
-Lalu untuk menjalankan aplikasi nya dengan cara berikut :
+- **Responsive Design**: Works on desktop, tablet, and mobile
+- **Clean Interface**: Easy-to-navigate dashboard
+- **Real-time Updates**: Instant stock level updates
+- **Visual Indicators**: Color-coded stock levels (green: adequate, yellow: low, red: critical)
+- **Search & Filter**: Quick product lookup
+- **Data Tables**: Sortable and paginated product lists
 
--   buka terminal yang sudah mengarah di project ini
--   lalu ketikan
+## 📊 Database Schema
 
-```
- php artisan serve
-```
+Key tables:
+- `products` - Product information
+- `categories` - Product categories
+- `stock_transactions` - Stock movement history
+- `users` - System users
+- `roles` - User roles and permissions
 
--   setelah itu copy url yang muncul "http://127.0.0.1:8000/" biasanya itu yang akan tertulis
--   lalu pastekan url tersebut di browser yang kalian suka lalau klik enter
+## 🔒 Security Features
 
-## FITUR YANG ADA DI APLIKASI INVENTORY
+- Laravel authentication system
+- Role-based access control
+- CSRF protection
+- SQL injection prevention
+- XSS protection
+- Secure password hashing
 
-Fitur yang terdapat pada aplikasi ini diantaranya :
+## 🐛 Troubleshooting
 
-### ADMINISTRATOR
+### Common Issues
 
-<!-- <img src="https://user-images.githubusercontent.com/68214221/167260281-0c1a8aa3-bc65-467d-84ba-c5f245a10cf3.png" width="500"> -->
+1. **Database Connection Error**
+   - Verify MySQL is running
+   - Check `.env` credentials
+   - Ensure database exists
 
-<!-- Administrator dapat mengelola : -->
+2. **Storage Link Missing**
+   - Run: `php artisan storage:link`
 
-<!-- 1. Login dengan cara ketik di url "http://127.0.0.1:8000/login"
-   <img src="https://user-images.githubusercontent.com/68214221/167260912-979f2157-5490-4b3d-8aa5-356d6ed248e7.png" width="500">
+3. **Permission Denied**
+   - Set proper permissions:
+   ```bash
+   chmod -R 775 storage bootstrap/cache
+   ```
 
-2. Melakukan CRUD(Create, Read, Update dan Delete) pada Tipe Kamar
-   <img src="https://user-images.githubusercontent.com/68214221/167260309-bb4e3499-4c4f-47a1-bb88-cc046f10d9bf.png" width="500">
+4. **Assets Not Loading**
+   - Run: `npm run dev` or `npm run build`
+   - Clear cache: `php artisan cache:clear`
 
-3. Melakukan CRUD(Create, Read, Update dan Delete) pada Fasilitas Kamar
-   <img src="https://user-images.githubusercontent.com/68214221/167260308-bd2549d3-1f26-41fa-a647-73a3fc11a556.png" width="500">
+## 🚀 Future Enhancements
 
-4. Melakukan CRUD(Create, Read, Update dan Delete) pada Fasilitas Hotel
-   <img src="https://user-images.githubusercontent.com/68214221/167260306-3b5022c6-e0d5-4f79-8621-c0486b64cd66.png" width="500">
+Potential improvements:
+- Barcode scanning integration
+- Automated purchase orders
+- Supplier management module
+- Email notifications for low stock
+- Mobile application
+- Advanced analytics and forecasting
+- Multi-warehouse support
 
-kalian bisa mencoba nya sendiri untuk fitur admin ini -->
+## 📝 Development Process
 
-### KARYAWAN
+### Challenges Faced
+1. **Requirements Gathering**: Conducting thorough research and client interviews
+2. **UI/UX Design**: Creating an intuitive interface for medical staff
 
-<!-- <img src="https://user-images.githubusercontent.com/68214221/167260695-663dfa0d-2225-4c73-98a5-bc4964ecfcf1.png" width="500">
+### Solutions Implemented
+1. **Client Collaboration**: Regular interviews with Rayyan Medical stakeholders
+2. **Design-First Approach**: Created mockups and prototypes for client approval before coding
+3. **Iterative Development**: Implemented feedback loops for continuous improvement
 
-Resepsionis dapat mengelola :
+## 🤝 Contributing
 
-1. Login dengan cara ketik di url "http://127.0.0.1:8000/login"
-   <img src="https://user-images.githubusercontent.com/68214221/167260912-979f2157-5490-4b3d-8aa5-356d6ed248e7.png" width="500">
+This project was developed for Rayyan Medical's final project submission. Suggestions and improvements are welcome!
 
-2. Melakukan filtering data berdasarkan tanggal check-in dan nama tamu. Serta dapat melakukan check-in kamar yang sudah dipesan dan dapat melakukan pembatalan pesan.
-   <img src="https://user-images.githubusercontent.com/68214221/167260698-b6b7f038-065e-434c-b5e1-afb97c753f54.png" width="500">
+## 📄 License
 
-3. Melihat nota reservasi pada tombol "lihat" dan tampilan nya seperti ini jika di klik.
-   <img src="https://user-images.githubusercontent.com/68214221/167260781-a607e447-e1f6-4867-b32b-18c267294aef.png" width="500">
+This project is proprietary to Rayyan Medical. Use for educational reference only.
 
-Resepsionis tidak mengatur check-out reservasi karena fitur chekc-out sudah dibuat otomatis oleh sistem.
-Jika hari ini sama dengan hari check-out maka status reservasi akan berubah menjadi "check-out" secara otomatis selama halaman itu di refresh. -->
+## 📞 Contact
 
-## KONTAK
+For questions, suggestions, or corrections, please contact through the email available in my portfolio.
 
-Sekian project ujian dunia industri tahun 2022 milik saya ini, <br>
-Jika ada yang ingin ditambahkan atau dikoreksi bisa hubungi saya ke email yang berada di portofolio ya!
+---
 
-Arigatou. :)
+**Built for Rayyan Medical** 🏥  
+Industry Certification Final Project 2022
 
-🔥 TERIMAKASIH 🔥 <br>
-Terimakasih banyak untuk kalian yang udah mampir kesini, semoga mempelajari sesuatu! ❤️
-
-```
-
-```
+**Thank you!** 🔥  
+Thank you for checking out this project. Hope you find it useful! ❤️
