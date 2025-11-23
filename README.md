@@ -2,10 +2,12 @@
 <!-- slug: inventory-rayyan-medical -->
 <!-- title: Rayyan Medical Inventory System -->
 <!-- description: Comprehensive inventory management web application for Rayyan Medical to track medical supplies and equipment in real-time -->
-<!-- image: https://github.com/user-attachments/assets/placeholder-inventory-rayyan -->
+<!-- image: https://github.com/user-attachments/assets/1a7dd321-5fa6-470e-978d-c5dde6dfee09 -->
 <!-- tags: laravel, php, mysql, inventory-management, medical, bootstrap -->
 
 # Rayyan Medical Inventory Management System
+
+<img width="1536" height="1024" alt="rayyan-medical-inventory" src="https://github.com/user-attachments/assets/1a7dd321-5fa6-470e-978d-c5dde6dfee09" />
 
 A comprehensive web-based inventory management system developed specifically for Rayyan Medical, a medical equipment store. This applicationprovides real-time digital tracking of medical supplies and equipment, enabling efficient stock management and operational oversight.
 
